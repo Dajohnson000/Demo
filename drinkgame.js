@@ -43,8 +43,12 @@ function bar() {
   text(answer, 50, 50);
   text(recipe, 50, 80);
   if (youWon === true) {
-    winCondition = true;
-}
+  winCondition = true;
+  }
+  if (youWon === false){
+    winCondition = false;
+    console.log("hello");
+  }
 }
 function mouseClicked() {
   if (vodka.mouseClicked())recipe = recipe + " vodka";
@@ -57,4 +61,12 @@ function mouseClicked() {
   if (tonic.mouseClicked()) recipe = recipe + " tonic";
   text(answer, 150, 125);
   if (serve.mouseClicked()) answerKey();
+}
+function answerKey() {
+  if (recipe === answer){
+    youWon = true;
+  }
+  if (recipe !== answer){
+    youWon = false;
+  }
 }
