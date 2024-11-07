@@ -23,7 +23,7 @@ function setup() {
 }
 
 function draw() {
-  background("blue");
+  background("darkolivegreen");
   console.log(youWon);
   switch (state) {
     case 0:
@@ -159,6 +159,9 @@ function draw() {
       }
       break;
     case 20:
+      youWon = undefined;
+      winCondition = undefined;
+      recipe = "";
       say(
         "Andy: You seem competent enough",
         windowWidth / 2,
@@ -166,6 +169,9 @@ function draw() {
       );
       break;
     case 21:
+      youWon = undefined;
+      winCondition = undefined;
+      recipe = "";
       say(
         "Andy: I don't know what that was but thanks I guess",
         windowWidth / 2,
@@ -173,6 +179,9 @@ function draw() {
       );
       break;
     case 22:
+      youWon = undefined;
+      winCondition = undefined;
+      recipe = "";
       say(
         "Andy: This drink tastes a little funny",
         windowWidth / 2,
@@ -239,13 +248,16 @@ function draw() {
       bar();
       answer = " vodka soda";
       if (winCondition === true) {
-        state = 14;
+        state++;
       }
       if (winCondition === false) {
-        state = 22;
+        state = 43;
       }
       break;
     case 35:
+      youWon = undefined;
+      winCondition = undefined;
+      recipe = "";
       say("Andy: Thanks", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 36:
@@ -286,6 +298,9 @@ function draw() {
       say("Andy: Yeah I know", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 43:
+      youWon = undefined;
+      winCondition = undefined;
+      recipe = "";
       say(
         "Andy: Ugh, This is horrible",
         windowWidth / 2,
@@ -399,13 +414,16 @@ function draw() {
       bar();
       answer = " gin and tonic";
       if (winCondition === true) {
-        state = 14;
+        state++;
       }
       if (winCondition === false) {
-        state = 22;
+        state = 67;
       }
       break;
     case 66:
+      youWon = undefined;
+      winCondition = undefined;
+      recipe = "";
       say(
         "Andy: Thanks I needed this",
         windowWidth / 2,
@@ -413,6 +431,9 @@ function draw() {
       );
       break;
     case 67:
+      youWon = undefined;
+      winCondition = undefined;
+      recipe = "";
       say(
         "Andy: This will work I guess",
         windowWidth / 2,
@@ -428,7 +449,7 @@ function draw() {
       break;
     case 69:
       say(
-        "Alright let's do some shots. I will do some with you to give you some company",
+        "Alright let's do some shots. I will do some with you to keep you company",
         windowWidth / 2,
         windowHeight * 0.66 + 100
       );
@@ -444,16 +465,22 @@ function draw() {
       bar();
       answer = " vodka";
       if (winCondition === true) {
-        state = 14;
+        state++;
       }
       if (winCondition === false) {
-        state = 22;
+        state = 73;
       }
       break;
     case 72:
+      youWon = undefined;
+      winCondition = undefined;
+      recipe = "";
       say("Andy: Thanks", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 73:
+      youWon = undefined;
+      winCondition = undefined;
+      recipe = "";
       say(
         "Andy: Y'all's vodka sucks",
         windowWidth / 2,
@@ -467,16 +494,22 @@ function draw() {
       bar();
       answer = " vodka";
       if (winCondition === true) {
-        state = 14;
+        state++;
       }
       if (winCondition === false) {
-        state = 22;
+        state = 77;
       }
       break;
     case 76:
+      youWon = undefined;
+      winCondition = undefined;
+      recipe = "";
       say("Andy: Thanks", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 77:
+      youWon = undefined;
+      winCondition = undefined;
+      recipe = "";
       say("Andy: disgusting", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 78:
@@ -495,13 +528,16 @@ function draw() {
       answer = " vodka";
       bar();
       if (winCondition === true) {
-        state = 14;
+        state++;
       }
       if (winCondition === false) {
-        state = 22;
+        state = 85;
       }
       break;
     case 83:
+      youWon = undefined;
+      winCondition = undefined;
+      recipe = "";
       say(
         "Andy: Alright I ammm donnne I thiiink",
         windowWidth / 2,
@@ -512,6 +548,9 @@ function draw() {
       say("III agreeeee", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 85:
+      youWon = undefined;
+      winCondition = undefined;
+      recipe = "";
       text("*Andy Leaves*", windowWidth / 2, windowHeight * 0.33 + 50);
       break;
     case 86:
@@ -549,10 +588,13 @@ function draw() {
         state++;
       }
       if (winCondition === false) {
-        state = 22;
+        state = 109;
       }
       break;
     case 95:
+      youWon = undefined;
+      winCondition = undefined;
+      recipe = "";
       say(
         "Andy: She didn't make it",
         windowWidth / 2,
@@ -623,6 +665,9 @@ function draw() {
       say("Thanks", windowWidth / 2, widowHeight * 0.66 + 100);
       break;
     case 109:
+      youWon = undefined;
+      winCondition = undefined;
+      recipe = "";
       text("*Andy Leaves", windowWidth / 2, windowHeight * 0.33 + 50);
       break;
     case 110:
@@ -673,7 +718,7 @@ function draw() {
         state++;
       }
       if (winCondition === false) {
-        state = 22;
+        state = 129;
       }
       break;
     case 122:
@@ -877,55 +922,61 @@ function draw() {
         state++;
       }
       if (winCondition === false) {
-        state = 181;
+        state = 172;
       }
       break;
     case 169:
+      youWon = undefined;
+      winCondition = undefined;
+      recipe = "";
       say("Andy: Thanks \n ... \n Are you sure you are good?", windowWidth / 2, widowHeight * 0.66 + 100);
       break;
-      case 179:
+      case 170:
       say("I am great", windowWidth / 2, widowHeight * 0.66 + 100);
       break;
-    case 180:
+    case 171:
       say("Andy: Alright", windowWidth / 2, widowHeight * 0.66 + 100);
       break;
-    case 181:
+    case 172:
+      youWon = undefined;
+      winCondition = undefined;
+      recipe = "";
       say("Andy: This is not what I ordered", windowWidth / 2, widowHeight * 0.66 + 100);
       break;
-      case 182:
+      case 173:
       say("Sure it is", windowWidth / 2, widowHeight * 0.66 + 100);
       break;
-      case 183:
+      case 174:
       say("Andy: Nope it definitely is not", windowWidth / 2, widowHeight * 0.66 + 100);
       break;
-      case 184:
+      case 175:
       say("Boss: Are you drunk again behind the bar?", windowWidth / 2, widowHeight * 0.66 + 100);
       break;
-      case 185:
+      case 176:
       say("No definitely not", windowWidth / 2, widowHeight * 0.66 + 100);
       break;
-      case 186:
+      case 177:
       say("Boss: Take a breathalyzer test then", windowWidth / 2, widowHeight * 0.66 + 100);
       break;
-      case 187:
+      case 178:
       
       break;
-      case 188:
+      case 179:
       say("Boss: A BAC of 0.05 is way to high for the start of your shift", windowWidth / 2, widowHeight * 0.66 + 100);
       break;
-      case 189:
+      case 180:
       say("Boss: You're fired. Go home and sober up", windowWidth / 2, widowHeight * 0.66 + 100);
       break;
-      case 190:
+      case 181:
       say("Boss: You have messed up way to many drinks to be working here. You are not qualified to be a bartender", windowWidth / 2, widowHeight * 0.66 + 100);
       break;
-      case 191:
+      case 182:
       text("You continue your job as a bartender. You continue drinking behind the bar and before shifts to keep your spirits up. Unfortunately, you end up forming a dependancy on alcohol. You continue your job and become a functioning alcoholic", windowWidth / 2, windowHeight * 0.33 + 50);
       break;
-      case 192:
+      case 183:
       text("After you were fired for being drunk behind the bar you have decided to cut alcohol out of your life. With recommendations from your friends and family you decide rehab is a good idea for you. You then find a job away from alcohol", windowWidth / 2, windowHeight * 0.33 + 50);
       break;
-      case 193:
+      case 184:
       text("After you were fired for being a terible bartender you find a different job. You start as a customer service rep on Monday.", windowWidth / 2, windowHeight * 0.33 + 50);
       break;
     
@@ -939,10 +990,36 @@ function say(s, x, y) {
   text(s, x, y);
 }
 function keyPressed() {
-  let stateArray = [13, 33];
+  let stateArray = [13, 19, 20, 21, 34, 42, 65, 66, 71, 72, 75, 76, 82, 94, 121, 145, 150, 168, 171, 180, 181, 182, 183, 184];
   if (keyCode == 13) {
     if (!stateArray.includes(state)) {
       state++;
     }
+    if (state == 20){
+      state = 23
+    }
+    if (state == 21)
+      state = 23
+  }
+  if (state == 42){
+    state = 46
+  }
+  if (state == 66){
+    state = 68
+  }
+  if (state == 72){
+    state = 74
+  }
+  if (state == 76){
+    state = 78
+  }
+  if (state == 150){
+    state = 155
+  }
+  if (state == 171){
+    state = 182
+  }
+  if (state == 180){
+    state = 183
   }
 }
