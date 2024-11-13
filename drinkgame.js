@@ -48,6 +48,7 @@ function bar() {
   if (youWon === false){
     winCondition = false;
     console.log("hello");
+    fail++;
   }
 }
 function mouseClicked() {
