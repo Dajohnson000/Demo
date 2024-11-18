@@ -1,15 +1,14 @@
 class Ingredient {
-  constructor(name, xPos, yPos, isClicked) {
+  constructor(name, xPos, yPos, isClicked, imgName) {
     this.name = name;
     this.xPos = xPos;
     this.yPos = yPos;
     this.isClicked = isClicked;
+    this.img = loadImage(imgName);
   }
   display() {
-    fill("white");
-    strokeWeight(3);
-    rect(this.xPos, this.yPos, 55, 55);
-    //text(this.name, this.xPos + 50, this.yPos)
+    image(this.img);
+    console.log(this.img);
   }
   mouseClicked() {
     let rectWidth = 55;
@@ -20,17 +19,8 @@ class Ingredient {
       }
 }
 }
-vodka = new Ingredient("vodka", 50, yPos, false);
-rum = new Ingredient("rum", 125, yPos, false);
-whiskey = new Ingredient("whiskey", 200, yPos, false);
-soda = new Ingredient("soda", 725, yPos, false);
-ice = new Ingredient("ice", 1000, 500, false);
-tequilla = new Ingredient("tequilla", 275, yPos, false);
-gin = new Ingredient("gin", 350, yPos, false);
-tonic = new Ingredient("tonic", 650, yPos, false);
-serve = new Ingredient("serve", 1250, 600, false);
-
 function bar() {
+  //image(img[0], 0, 0)
   vodka.display();
   rum.display();
   whiskey.display();

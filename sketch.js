@@ -16,10 +16,27 @@ let xPos = 400;
 let id;
 let winCondition;
 let fail = 0;
+let img = [];
+function preload(){
+  vodka = new Ingredient("vodka", 50, yPos, false, 'assets/vodka.png');
+  rum = new Ingredient("rum", 125, yPos, false, 'assets/rum.png');
+  whiskey = new Ingredient("whiskey", 200, yPos, false,'assets/whiskey.png');
+  soda = new Ingredient("soda", 725, yPos, false, 'assets/soda.png');
+  ice = new Ingredient("ice", 1000, 500, false, 'assets/ice.png');
+  tequilla = new Ingredient("tequilla", 275, yPos, false, 'assets/tequilla.png');
+  gin = new Ingredient("gin", 350, yPos, false, 'assets/gin.png');
+  tonic = new Ingredient("tonic", 650, yPos, false, 'assets/tonic.png');
+  serve = new Ingredient("serve", 1250, 600, false, 'assets/serve.png');
+}
 function setup() {
   let canvas = new Canvas("fullscreen");
   textFont("Courier", 24);
   console.log(serve);
+  
+img[0] = loadImage('assets/drinkbackground.png');
+img[1] = loadImage('assets/textbox.png');
+
+
 }
 
 function draw() {
@@ -1107,7 +1124,7 @@ function draw() {
 }
 
 function say(s, x, y) {
-  //rect(x - 5, y - 20, 700, 300, 5, 5, 5, 5);
+  rect(x - 5, y - 20, 700, 300, 5, 5, 5, 5);
   text(s, x, y);
 }
 function keyPressed() {
