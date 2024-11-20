@@ -1,4 +1,4 @@
-let yPos = 350;
+let yPos = 534;
 let vodka;
 let rum;
 let whiskey;
@@ -11,22 +11,24 @@ let recipe = "";
 let answer = "";
 let serve;
 let youWon;
-let state = 0;
+let state = 13;
 let xPos = 400;
 let id;
 let winCondition;
 let fail = 0;
 let img = [];
+let imgWidth;
+let imgHeight;
 function preload(){
-  vodka = new Ingredient("vodka", 50, yPos, false, 'assets/vodka.png');
-  rum = new Ingredient("rum", 125, yPos, false, 'assets/rum.png');
-  whiskey = new Ingredient("whiskey", 200, yPos, false,'assets/whiskey.png');
-  soda = new Ingredient("soda", 725, yPos, false, 'assets/soda.png');
-  ice = new Ingredient("ice", 1000, 500, false, 'assets/ice.png');
-  tequilla = new Ingredient("tequilla", 275, yPos, false, 'assets/tequilla.png');
-  gin = new Ingredient("gin", 350, yPos, false, 'assets/gin.png');
-  tonic = new Ingredient("tonic", 650, yPos, false, 'assets/tonic.png');
-  serve = new Ingredient("serve", 1250, 600, false, 'assets/serve.png');
+  vodka = new Ingredient("vodka", 125, yPos, false, 'assets/vodka.png', 85, 85);
+  rum = new Ingredient("rum", 200, yPos, false, 'assets/rum.png', 85, 85);
+  whiskey = new Ingredient("whiskey", 275, yPos, false,'assets/whiskey.png', 85, 85);
+  soda = new Ingredient("soda", 850, yPos, false, 'assets/soda.png', 100, 100);
+  ice = new Ingredient("ice", 975, 535, false, 'assets/ice.png', 250, 85);
+  tequilla = new Ingredient("tequilla", 350, yPos, false, 'assets/tequilla.png', 85, 85);
+  gin = new Ingredient("gin", 425, yPos, false, 'assets/gin.png', 85, 85);
+  tonic = new Ingredient("tonic", 500, yPos, false, 'assets/tonic.png', 85, 85);
+  serve = new Ingredient("serve", 1250, 450, false, 'assets/serve.png', 100, 100);
 }
 function setup() {
   let canvas = new Canvas("fullscreen");

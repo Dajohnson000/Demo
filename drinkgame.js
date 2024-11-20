@@ -1,14 +1,17 @@
 class Ingredient {
-  constructor(name, xPos, yPos, isClicked, imgName) {
+  constructor(name, xPos, yPos, isClicked, imgName, imgWidth, imgHeight) {
     this.name = name;
     this.xPos = xPos;
     this.yPos = yPos;
     this.isClicked = isClicked;
     this.img = loadImage(imgName);
+    this.imgWidth = imgWidth;
+    this.imgHeight = imgHeight;
   }
   display() {
-    image(this.img);
-    console.log(this.img);
+    image(this.img,this.xPos,this.yPos);
+    this.img.resize(this.imgWidth, this.imgHeight)
+    //console.log(this.img);
   }
   mouseClicked() {
     let rectWidth = 55;
@@ -20,7 +23,8 @@ class Ingredient {
 }
 }
 function bar() {
-  //image(img[0], 0, 0)
+  image(img[0], 0, 0)
+  img[0].resize(windowWidth, windowHeight);
   vodka.display();
   rum.display();
   whiskey.display();
