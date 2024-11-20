@@ -16,7 +16,7 @@ class Ingredient {
   mouseClicked() {
     let rectWidth = 55;
     let rectHeight = 55;
-    if(mouseX > this.xPos && mouseX < this.xPos + rectWidth && mouseY > this.yPos && mouseY < this.yPos + rectHeight) {
+    if(mouseX > this.xPos && mouseX < this.xPos + this.imgWidth && mouseY > this.yPos && mouseY < this.yPos + this.imgHeight) {
       console.log("done");
        return true;
       }

@@ -11,7 +11,7 @@ let recipe = "";
 let answer = "";
 let serve;
 let youWon;
-let state = 13;
+let state = 0;
 let xPos = 400;
 let id;
 let winCondition;
@@ -34,7 +34,6 @@ function setup() {
   let canvas = new Canvas("fullscreen");
   textFont("Courier", 24);
   console.log(serve);
-  
 img[0] = loadImage('assets/drinkbackground.png');
 img[1] = loadImage('assets/textbox.png');
 
@@ -223,6 +222,7 @@ function draw() {
       text("End of Shift 1", windowWidth / 2, windowHeight * 0.33 + 50);
       break;
     case 25:
+      state++
       break;
     case 26:
       text("Shift 2", windowWidth / 2, windowHeight * 0.33 + 50);
@@ -1126,8 +1126,10 @@ function draw() {
 }
 
 function say(s, x, y) {
-  rect(x - 5, y - 20, 700, 300, 5, 5, 5, 5);
-  text(s, x, y);
+  image(img[1], x - 250, y - 138);
+ // img[1].resize(400, textHeight(s));
+  text(s, x - 225, y - 100);
+  img[1].resize( 800, 200);
 }
 function keyPressed() {
   let stateArray = [
