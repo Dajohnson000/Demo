@@ -739,6 +739,7 @@ function draw() {
       say("Want a drink?", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 93:
+      image(img[3], 0, 0);
       say("Andy: Vodka Soda", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 94:
