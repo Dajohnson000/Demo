@@ -36,6 +36,11 @@ function setup() {
   console.log(serve);
 img[0] = loadImage('assets/drinkbackground.png');
 img[1] = loadImage('assets/textbox.png');
+img[2] = loadImage('assets/andylistening.JPG');
+img[3] = loadImage('assets/andytalking.JPG')
+img[4] = loadImage('assets/andysad.JPG');
+img[5] = loadImage('assets/andydrinking.JPG');
+
 
 
 }
@@ -43,6 +48,10 @@ img[1] = loadImage('assets/textbox.png');
 function draw() {
   background("darkolivegreen");
   console.log(youWon);
+  img[2].resize(windowWidth,windowHeight);
+  img[3].resize(windowWidth,windowHeight);
+  img[4].resize(windowWidth,windowHeight);
+  img[5].resize(windowWidth,windowHeight);
   switch (state) {
     case 0:
       say(
@@ -86,6 +95,7 @@ function draw() {
       text("Shift 1", windowWidth / 2, windowHeight * 0.33 + 50);
       break;
     case 7:
+      image(img[3], 0, 0);
       say(
         "Andy: Well hellos there. I have \n not met you yet. You must be new",
         windowWidth / 2,
@@ -93,6 +103,7 @@ function draw() {
       );
       break;
     case 8:
+      image(img[2], 0, 0);
       say(
         "Wow you must come often if you \npicked up that this is my first \nday",
         windowWidth / 2,
@@ -100,6 +111,7 @@ function draw() {
       );
       break;
     case 9:
+      image(img[3], 0, 0);
       say(
         "Andy: Well, everyday I need time \naway from my wife to have some \nme time so I strool down here",
         windowWidth / 2,
@@ -107,6 +119,7 @@ function draw() {
       );
       break;
     case 10:
+      image(img[2], 0, 0);
       say(
         "A little personal time never hurt anybody",
         windowWidth / 2,
@@ -114,6 +127,8 @@ function draw() {
       );
       break;
     case 11:
+      image(img[3], 0, 0);
+
       say(
         "Andy: Exactly now can you get me \na Jack and coke",
         windowWidth / 2,
@@ -121,6 +136,7 @@ function draw() {
       );
       break;
     case 12:
+      image(img[2], 0, 0);
       say("Of course", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 13:
@@ -139,6 +155,7 @@ function draw() {
       console.log(winCondition);
       break;
     case 14:
+      image(img[5], 0, 0);
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
@@ -147,6 +164,8 @@ function draw() {
       console.log(say);
       break;
     case 15:
+      image(img[3], 0, 0);
+
       say(
         "Andy: Absolutely perfect",
         windowWidth / 2,
@@ -154,6 +173,8 @@ function draw() {
       );
       break;
     case 16:
+      image(img[3], 0, 0);
+
       say(
         "Andy: For your first day let me buy \nyou us a couple shots",
         windowWidth / 2,
@@ -161,6 +182,7 @@ function draw() {
       );
       break;
     case 17:
+      image(img[2], 0, 0);
       say(
         "Nice, what are we drinking",
         windowWidth / 2,
@@ -168,6 +190,8 @@ function draw() {
       );
       break;
     case 18:
+      image(img[3], 0, 0);
+
       say("Andy: Whsikey", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 19:
@@ -186,6 +210,7 @@ function draw() {
       }
       break;
     case 20:
+      image(img[5], 0, 0);
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
@@ -196,6 +221,8 @@ function draw() {
       );
       break;
     case 21:
+      image(img[3], 0, 0);
+
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
@@ -206,6 +233,8 @@ function draw() {
       );
       break;
     case 22:
+      image(img[3], 0, 0);
+
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
@@ -228,9 +257,12 @@ function draw() {
       text("Shift 2", windowWidth / 2, windowHeight * 0.33 + 50);
       break;
     case 27:
+      image(img[3], 0, 0);
+
       say("Andy: Well hello again", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 28:
+      image(img[2], 0, 0);
       say(
         "Hiding from your wife again?",
         windowWidth / 2,
@@ -238,6 +270,8 @@ function draw() {
       );
       break;
     case 29:
+      image(img[3], 0, 0);
+
       say(
         "Andy: I forgot to do the dishes \nand take out the trash",
         windowWidth / 2,
@@ -245,6 +279,7 @@ function draw() {
       );
       break;
     case 30:
+      image(img[2], 0, 0);
       say(
         "Come on man. Those are the easy \nthings",
         windowWidth / 2,
@@ -252,6 +287,8 @@ function draw() {
       );
       break;
     case 31:
+      image(img[3], 0, 0);
+
       say(
         "Andy: I know. That's why she is so \npissed at me",
         windowWidth / 2,
@@ -259,6 +296,7 @@ function draw() {
       );
       break;
     case 32:
+      image(img[2], 0, 0);
       say(
         "Well good luck with that",
         windowWidth / 2,
@@ -266,6 +304,8 @@ function draw() {
       );
       break;
     case 33:
+      image(img[3], 0, 0);
+
       say(
         "Andy: Well I will have a vodka soda\n tonight",
         windowWidth / 2,
@@ -287,12 +327,15 @@ function draw() {
       }
       break;
     case 35:
+      image(img[5], 0, 0);
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
       say("Andy: Thanks", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 36:
+      image(img[3], 0, 0);
+
       say(
         "Andy: Unfortunately I have not been \nmaking it easier on her",
         windowWidth / 2,
@@ -300,9 +343,12 @@ function draw() {
       );
       break;
     case 37:
+      image(img[4], 0, 0);
       say("Huh", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 38:
+      image(img[3], 0, 0);
+
       say(
         "Andy: My wife, I don't think she is \nfeeling well",
         windowWidth / 2,
@@ -310,9 +356,12 @@ function draw() {
       );
       break;
     case 39:
+      image(img[4], 0, 0);
       say("Is she ok?", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 40:
+      image(img[3], 0, 0);
+
       say(
         "Andy: I hope so but I am honestly not \ntoo sure",
         windowWidth / 2,
@@ -320,6 +369,7 @@ function draw() {
       );
       break;
     case 41:
+      image(img[4], 0, 0);
       say(
         "Well maybe doing the dishes and taking out \nthe trash might be a good start to \nmaking her feel better",
         windowWidth / 2,
@@ -327,9 +377,12 @@ function draw() {
       );
       break;
     case 42:
+      image(img[3], 0, 0);
+
       say("Andy: Yeah I know", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 43:
+      image(img[3], 0, 0);
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
@@ -340,9 +393,12 @@ function draw() {
       );
       break;
     case 44:
+      image(img[2], 0, 0);
       say("Oh, my bad", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 45:
+      image(img[3], 0, 0);
+
       say(
         "Andy: If it stays like this I might not be \nable to come back to my favorite place",
         windowWidth / 2,
@@ -369,6 +425,7 @@ function draw() {
       text("Shift 3", windowWidth / 2, windowHeight * 0.33 + 50);
       break;
     case 51:
+      image(img[4], 0, 0);
       say(
         "Hey man how are you doing",
         windowWidth / 2,
@@ -376,6 +433,9 @@ function draw() {
       );
       break;
     case 52:
+  
+      image(img[3], 0, 0);
+
       say(
         "Andy: Been better, been worse",
         windowWidth / 2,
@@ -383,6 +443,7 @@ function draw() {
       );
       break;
     case 53:
+      image(img[4], 0, 0);
       say(
         "What did you forget this time?",
         windowWidth / 2,
@@ -390,6 +451,8 @@ function draw() {
       );
       break;
     case 54:
+      image(img[3], 0, 0);
+
       say(
         "Andy: Nothing but my wife is in the hospital",
         windowWidth / 2,
@@ -397,9 +460,12 @@ function draw() {
       );
       break;
     case 55:
+      image(img[4], 0, 0);
       say("Oh no", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 56:
+      image(img[3], 0, 0);
+
       say(
         "Andy: Yep she just collapsed right in front of me",
         windowWidth / 2,
@@ -407,9 +473,12 @@ function draw() {
       );
       break;
     case 57:
+      image(img[4], 0, 0);
       say("Shit", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 58:
+      image(img[3], 0, 0);
+
       say(
         "Andy: Yep she is in surgery now",
         windowWidth / 2,
@@ -417,9 +486,12 @@ function draw() {
       );
       break;
     case 59:
+      image(img[4], 0, 0);
       say("I hope she is ok", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 60:
+      image(img[3], 0, 0);
+
       say(
         "Andy: Yeah the docs told me to go home \nbut I don't think I can",
         windowWidth / 2,
@@ -427,12 +499,16 @@ function draw() {
       );
       break;
     case 61:
+      image(img[4], 0, 0);
       say("Understandable", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 62:
+      image(img[4], 0, 0);
       say("Can I get you a drink", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 63:
+      image(img[3], 0, 0);
+
       say(
         "Andy: Gin and Tonic, her favorite",
         windowWidth / 2,
@@ -440,6 +516,7 @@ function draw() {
       );
       break;
     case 64:
+      image(img[2], 0, 0);
       say("Will do", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 65:
@@ -458,6 +535,7 @@ function draw() {
       }
       break;
     case 66:
+      image(img[5], 0, 0);
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
@@ -468,6 +546,7 @@ function draw() {
       );
       break;
     case 67:
+      image(img[5], 0, 0);
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
@@ -478,6 +557,8 @@ function draw() {
       );
       break;
     case 68:
+      image(img[3], 0, 0);
+
       say(
         "Andy: Let's do some shots. I don't want \nto be able to think right now",
         windowWidth / 2,
@@ -485,6 +566,7 @@ function draw() {
       );
       break;
     case 69:
+      image(img[4], 0, 0);
       say(
         "Alright let's do some shots. I will do some \nwith you to keep you company",
         windowWidth / 2,
@@ -492,6 +574,8 @@ function draw() {
       );
       break;
     case 70:
+      image(img[3], 0, 0);
+
       say(
         "Andy: I appreciate that, vodka",
         windowWidth / 2,
@@ -514,12 +598,14 @@ function draw() {
     }
       break;
     case 72:
+      image(img[5], 0, 0);
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
       say("Andy: Thanks", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 73:
+      image(img[5], 0, 0);
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
@@ -530,6 +616,8 @@ function draw() {
       );
       break;
     case 74:
+      image(img[3], 0, 0);
+
       say("Andy: Another", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 75:
@@ -548,27 +636,37 @@ function draw() {
     }
       break;
     case 76:
+      image(img[3], 0, 0);
+
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
       say("Andy: Thanks", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 77:
+      image(img[3], 0, 0);
+
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
       say("Andy: disgusting", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 78:
+      image(img[3], 0, 0);
+
       say("Andy: Another", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 79:
+      image(img[2], 0, 0);
       say("You sure?", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 80:
+      image(img[3], 0, 0);
+
       say("Andy: Give me another", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 81:
+      image(img[2], 0, 0);
       say("Alright", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 82:
@@ -587,6 +685,8 @@ function draw() {
     }
       break;
     case 83:
+      image(img[3], 0, 0);
+
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
@@ -597,6 +697,7 @@ function draw() {
       );
       break;
     case 84:
+      image(img[2], 0, 0);
       say("III agreeeee", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 85:
@@ -612,6 +713,7 @@ function draw() {
       text("Shift 4", windowWidth / 2, windowHeight * 0.33 + 50);
       break;
     case 88:
+      image(img[4], 0, 0);
       say(
         "Hey man everything alright?",
         windowWidth / 2,
@@ -619,21 +721,28 @@ function draw() {
       );
       break;
     case 89:
+      image(img[3], 0, 0);
+
       say("Andy: No", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 90:
+      image(img[4], 0, 0);
       say("Want to talk about it?", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 91:
+      image(img[3], 0, 0);
+
       say("Andy: No", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 92:
+      image(img[4], 0, 0);
       say("Want a drink?", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 93:
-      say("Vodka Soda", windowWidth / 2, windowHeight * 0.66 + 100);
+      say("Andy: Vodka Soda", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 94:
+      image(img[3], 0, 0);
       answer = " vodka soda";
       bar();
       if (winCondition === true) {
@@ -649,6 +758,8 @@ function draw() {
     }
       break;
     case 95:
+      image(img[3], 0, 0);
+
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
@@ -658,9 +769,12 @@ function draw() {
       );
       break;
     case 96:
+      image(img[4], 0, 0);
       say("I am so sorry", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 97:
+      image(img[3], 0, 0);
+
       say(
         "Andy: I did not get to say goodbye",
         windowWidth / 2,
@@ -668,6 +782,7 @@ function draw() {
       );
       break;
     case 98:
+      image(img[4], 0, 0);
       say(
         "We do not always get the chance to",
         windowWidth / 2,
@@ -675,18 +790,26 @@ function draw() {
       );
       break;
     case 99:
+      image(img[3], 0, 0);
+
       say("Andy: I miss her", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 100:
+      image(img[4], 0, 0);
       say("I understand \n \n...", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 101:
+      image(img[4], 0, 0);
       say("Do you need anything", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 102:
+      image(img[3], 0, 0);
+
       say("Andy: No \n \n ...", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 103:
+      image(img[3], 0, 0);
+
       say(
         "Andy: I don't know\n \n ...",
         windowWidth / 2,
@@ -694,6 +817,8 @@ function draw() {
       );
       break;
     case 104:
+      image(img[3], 0, 0);
+
       say(
         "Andy: I don't know what to do",
         windowWidth / 2,
@@ -701,6 +826,7 @@ function draw() {
       );
       break;
     case 105:
+      image(img[4], 0, 0);
       say(
         "Do you have any other family",
         windowWidth / 2,
@@ -708,9 +834,12 @@ function draw() {
       );
       break;
     case 106:
+      image(img[3], 0, 0);
+
       say("Andy: No", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 107:
+      image(img[4], 0, 0);
       say(
         "Well you are always welcome here",
         windowWidth / 2,
@@ -718,7 +847,8 @@ function draw() {
       );
       break;
     case 108:
-      say("Thanks", windowWidth / 2, windowHeight * 0.66 + 100);
+      image(img[3], 0, 0);
+      say("Andy: Thanks", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 109:
       youWon = undefined;
@@ -739,15 +869,21 @@ function draw() {
       text("Shift 5", windowWidth / 2, windowHeight * 0.33 + 50);
       break;
     case 114:
+      image(img[2], 0, 0);
       say("How are you doing", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 115:
+      image(img[3], 0, 0);
+
       say("Andy: Meh", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 116:
+      image(img[2], 0, 0);
       say("Want to talk?", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 117:
+      image(img[3], 0, 0);
+
       say(
         "Andy: Meh, I more of want a drink",
         windowWidth / 2,
@@ -755,16 +891,20 @@ function draw() {
       );
       break;
     case 118:
+      image(img[2], 0, 0);
       say("Understandable", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 119:
+      image(img[3], 0, 0);
+
       say(
-        "Can I get a tequilla soda?",
+        "Andy: Can I get a tequilla soda?",
         windowWidth / 2,
         windowHeight * 0.66 + 100
       );
       break;
     case 120:
+      image(img[2], 0, 0);
       say("Of course", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 121:
@@ -783,21 +923,28 @@ function draw() {
     }
       break;
     case 122:
+      image(img[5], 0, 0);
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
       say("Andy: Funeral was today", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 123:
+      image(img[2], 0, 0);
       say("How was it", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 124:
+      image(img[3], 0, 0);
+
       say("Andy: Nice", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 125:
+      image(img[2], 0, 0);
       say("That's good", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 126:
+      image(img[3], 0, 0);
+
       say(
         "Andy: A lot of old friends showed up",
         windowWidth / 2,
@@ -805,9 +952,11 @@ function draw() {
       );
       break;
     case 127:
+      image(img[2], 0, 0);
       say("That's good", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 128:
+      image(img[5], 0, 0);
       say("Andy: It was nice", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 129:
@@ -846,6 +995,8 @@ function draw() {
       say("Oh ok", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 138:
+      image(img[3], 0, 0);
+
       say(
         "Andy: Hey everything alright?",
         windowWidth / 2,
@@ -853,6 +1004,7 @@ function draw() {
       );
       break;
     case 139:
+      image(img[2], 0, 0);
       say(
         "Boss said no more drinking behind the bar for me",
         windowWidth / 2,
@@ -860,9 +1012,12 @@ function draw() {
       );
       break;
     case 140:
+      image(img[3], 0, 0);
+
       say("Andy: Oh, why?", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 141:
+      image(img[2], 0, 0);
       say(
         "Had too many the other night",
         windowWidth / 2,
@@ -870,9 +1025,12 @@ function draw() {
       );
       break;
     case 142:
+      image(img[3], 0, 0);
+
       say("Andy: I feel that", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 143:
+      image(img[2], 0, 0);
       say(
         "Anyways, what can I get you?",
         windowWidth / 2,
@@ -880,7 +1038,9 @@ function draw() {
       );
       break;
     case 144:
-      say("Vodka Soda", windowWidth / 2, windowHeight * 0.66 + 100);
+      image(img[3], 0, 0);
+
+      say("Andy: Vodka Soda", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 145:
       answer = " vodka soda";
@@ -898,6 +1058,8 @@ function draw() {
     }
       break;
     case 146:
+      image(img[3], 0, 0);
+
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
@@ -908,6 +1070,7 @@ function draw() {
       );
       break;
     case 147:
+      image(img[2], 0, 0);
       say(
         "Not a lot. Just a drink or two before work and \na beer or two after and if some people want me to do \nshots with them during my shift then I will",
         windowWidth / 2,
@@ -915,6 +1078,8 @@ function draw() {
       );
       break;
     case 148:
+      image(img[3], 0, 0);
+
       say(
         "Andy: That is a decent amount. Be careful how much \nyou drink as you can become dependant on it",
         windowWidth / 2,
@@ -922,6 +1087,7 @@ function draw() {
       );
       break;
     case 149:
+      image(img[2], 0, 0);
       say(
         "I am do not feel like I am",
         windowWidth / 2,
@@ -929,9 +1095,13 @@ function draw() {
       );
       break;
     case 150:
+      image(img[3], 0, 0);
+
       say("Andy: Yet", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 151:
+      image(img[3], 0, 0);
+
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
@@ -942,9 +1112,12 @@ function draw() {
       );
       break;
     case 152:
+      image(img[2], 0, 0);
       say("Maybe, why?", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 153:
+      image(img[3], 0, 0);
+
       say(
         "Andy: Because this drink is horrible",
         windowWidth / 2,
@@ -952,6 +1125,7 @@ function draw() {
       );
       break;
     case 154:
+      image(img[2], 0, 0);
       say("Oh sorry", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 155:
@@ -990,9 +1164,12 @@ function draw() {
       text("Start of Shift 7", windowWidth / 2, windowHeight * 0.33 + 50);
       break;
     case 164:
+      image(img[2], 0, 0);
       say("Hey Andy how are you?", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 165:
+      image(img[3], 0, 0);
+
       say(
         "Andy: Not bad how about you?",
         windowWidth / 2,
@@ -1000,9 +1177,12 @@ function draw() {
       );
       break;
     case 166:
+      image(img[2], 0, 0);
       say("I am amazing", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 167:
+      image(img[3], 0, 0);
+
       say(
         "Andy: That's great, now get me a drink so \nI can be amazing too. How about a whiskey",
         windowWidth / 2,
@@ -1025,6 +1205,7 @@ function draw() {
     }
       break;
     case 169:
+      image(img[5], 0, 0);
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
@@ -1035,12 +1216,16 @@ function draw() {
       );
       break;
     case 170:
+      image(img[2], 0, 0);
       say("I am great", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 171:
+      image(img[3], 0, 0);
+
       say("Andy: Alright", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 172:
+      image(img[5], 0, 0);
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
@@ -1051,9 +1236,12 @@ function draw() {
       );
       break;
     case 173:
+      image(img[2], 0, 0);
       say("Sure it is", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 174:
+      image(img[3], 0, 0);
+
       say(
         "Andy: Nope it definitely is not",
         windowWidth / 2,
