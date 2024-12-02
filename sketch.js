@@ -40,7 +40,15 @@ img[2] = loadImage('assets/andylistening.JPG');
 img[3] = loadImage('assets/andytalking.JPG')
 img[4] = loadImage('assets/andysad.JPG');
 img[5] = loadImage('assets/andydrinking.JPG');
-
+img[6] = loadImage('assets/PreShift.jpg');
+img[7] = loadImage('assets/endofshiftsober.jpg');
+img[8] = loadImage('assets/lazyafterwork.jpg');
+img[9] = loadImage('assets/drunkatbar.jpg');
+img[10] = loadImage('assets/Home kitchen.jpg');
+img[11] = loadImage('assets/newjob.jpg');
+img[12] = loadImage('assets/rehab.jpg');
+img[13] = loadImage('assets/Bosshappy.JPG');
+img[14] = loadImage('assets/bossmad.JPG');
 
 
 }
@@ -52,8 +60,18 @@ function draw() {
   img[3].resize(windowWidth,windowHeight);
   img[4].resize(windowWidth,windowHeight);
   img[5].resize(windowWidth,windowHeight);
+  img[6].resize(windowWidth,windowHeight);
+  img[7].resize(windowWidth,windowHeight);
+  img[8].resize(windowWidth, windowHeight);
+  img[9].resize(windowWidth, windowHeight);
+  img[10].resize(windowWidth, windowHeight);
+  img[11].resize(windowWidth,windowHeight);
+  img[12].resize(windowWidth,windowHeight);
+  img[13].resize(windowWidth,windowHeight);
+  img[14].resize(windowWidth,windowHeight);
   switch (state) {
     case 0:
+      image(img[13], 0, 0);
       say(
         "Boss: Hey, welcome to your new job!",
         windowWidth / 2,
@@ -61,6 +79,7 @@ function draw() {
       );
       break;
     case 1:
+      image(img[13], 0, 0);
       say(
         "Thanks! I am so excited to start",
         windowWidth / 2,
@@ -68,6 +87,7 @@ function draw() {
       );
       break;
     case 2:
+      image(img[13], 0, 0);
       say(
         "Boss: Well, just so you know. We have a 3 strikes \nand you out policy on drinks being made. \nIf you mess up a drink 3 different times you \nwill be fired. You can use a recipe if you \nneed it",
         windowWidth / 2,
@@ -75,9 +95,11 @@ function draw() {
       );
       break;
     case 3:
+      image(img[13], 0, 0);
       say("Alright, no problem!", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 4:
+      image(img[13], 0, 0);
       say(
         "Boss: Also, I don't really care \n if you have a drink or 2 behind the bar \nbut do not be drunk behind \nthe bar.",
         windowWidth / 2,
@@ -85,6 +107,7 @@ function draw() {
       );
       break;
     case 5:
+      image(img[13], 0, 0);
       say(
         "That should not be a probelm",
         windowWidth / 2,
@@ -92,7 +115,8 @@ function draw() {
       );
       break;
     case 6:
-      text("Shift 1", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[6], 0, 0);
+      say("Shift 1", windowWidth / 2, windowHeight * 0.33 + 50);
       break;
     case 7:
       image(img[3], 0, 0);
@@ -245,16 +269,19 @@ function draw() {
       );
       break;
     case 23:
+      image(img[0], 0, 0);
       say("*Andy leaves*", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 24:
-      text("End of Shift 1", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[7], 0, 0);
+      say("End of Shift 1", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 25:
       state++
       break;
     case 26:
-      text("Shift 2", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[6], 0, 0);
+      say("Shift 2", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 27:
       image(img[3], 0, 0);
@@ -406,9 +433,11 @@ function draw() {
       );
       break;
     case 46:
-      text("*Andy Leaves*", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[0], 0, 0);
+      say("*Andy Leaves*", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 47:
+      image(img[0], 0, 0);
       say(
         "Well might as well have my shift drink if \nit is free",
         windowWidth / 2,
@@ -416,13 +445,16 @@ function draw() {
       );
       break;
     case 48:
-      text("*You make a drink*", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[0], 0, 0);
+      say("*You make a drink*", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 49:
-      text("End of Shift 2", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[7], 0, 0);
+      text("End of Shift 2", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 50:
-      text("Shift 3", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[6], 0, 0);
+      text("Shift 3", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 51:
       image(img[4], 0, 0);
@@ -701,16 +733,19 @@ function draw() {
       say("III agreeeee", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 85:
+      image(img[0], 0, 0);
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
-      text("*Andy Leaves*", windowWidth / 2, windowHeight * 0.33 + 50);
+      say("*Andy Leaves*", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 86:
-      text("End of Shift 3", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[8], 0, 0);
+      say("End of Shift 3", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 87:
-      text("Shift 4", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[6], 0, 0);
+      say("Shift 4", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 88:
       image(img[4], 0, 0);
@@ -852,22 +887,27 @@ function draw() {
       say("Andy: Thanks", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 109:
+      image(img[0], 0, 0);
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
-      text("*Andy Leaves", windowWidth / 2, windowHeight * 0.33 + 50);
+      say("*Andy Leaves", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 110:
+      image(img[0], 0, 0);
       say("I hope Andy is ok", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 111:
-      text("*You make a drink*", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[0], 0, 0);
+      say("*You make a drink*", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 112:
-      text("End of Shift 4", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[8], 0, 0);
+      say("End of Shift 4", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 113:
-      text("Shift 5", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[6], 0, 0);
+      say("Shift 5", windowWidth / 2, windowHeight * 0.33 + 50);
       break;
     case 114:
       image(img[2], 0, 0);
@@ -961,21 +1001,26 @@ function draw() {
       say("Andy: It was nice", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 129:
+      image(img[0], 0, 0);
       youWon = undefined;
       winCondition = undefined;
       recipe = "";
-      text("*Andy Walks away*", windowWidth / 2, windowHeight * 0.33 + 50);
+      say("*Andy Walks away*", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 130:
-      text("*You take a shot*", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[0], 0, 0);
+      say("*You take a shot*", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 131:
-      text("End of Shift 5", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[8], 0, 0);
+      say("End of Shift 5", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 132:
-      text("Start of Shift 6", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[6], 0, 0);
+      say("Start of Shift 6", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 133:
+      image(img[14], 0, 0);
       say(
         "Boss: I am going to need you to cut \ndown on drinking behind the bar,",
         windowWidth / 2,
@@ -983,16 +1028,22 @@ function draw() {
       );
       break;
     case 134:
+      image(img[14], 0, 0);
       say("Why?", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 135:
+      image(img[14], 0, 0);
       say(
         "Boss: Well I saw the cameras for the past \ncouple shifts you have worked and you have \ndrank a decent bit behind the bar and after close",
         windowWidth / 2,
         windowHeight * 0.66 + 100
       );
       break;
+      case 136:
+        state++
+      break;
     case 137:
+      image(img[14], 0, 0);
       say("Oh ok", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 138:
@@ -1130,12 +1181,15 @@ function draw() {
       say("Oh sorry", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 155:
-      text("*Andy Walks away*", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[0], 0, 0);
+      say("*Andy Walks away*", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 156:
-      text("End of Shift 6", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[8], 0, 0);
+      say("End of Shift 6", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 157:
+      image(img[10], 0, 0);
       say(
         "I really do not feel like working",
         windowWidth / 2,
@@ -1143,6 +1197,7 @@ function draw() {
       );
       break;
     case 158:
+      image(img[10], 0, 0);
       say(
         "I will just take one little shot to improve my spirits",
         windowWidth / 2,
@@ -1150,19 +1205,24 @@ function draw() {
       );
       break;
     case 159:
-      text("*Takes a shot*", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[10], 0, 0);
+      say("*Takes a shot*", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 160:
+      image(img[10], 0, 0);
       say("Maybe one more", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 161:
-      text("*Takes a shot*", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[10], 0, 0);
+      text("*Takes a shot*", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 162:
+      image(img[10], 0, 0);
       say("Alrighty let's go", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 163:
-      text("Start of Shift 7", windowWidth / 2, windowHeight * 0.33 + 50);
+      image(img[6], 0, 0);
+      say("Start of Shift 7", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 164:
       image(img[2], 0, 0);
@@ -1250,6 +1310,7 @@ function draw() {
       );
       break;
     case 175:
+      image(img[14], 0, 0);
       say(
         "Boss: Are you drunk again behind the bar?",
         windowWidth / 2,
@@ -1257,9 +1318,11 @@ function draw() {
       );
       break;
     case 176:
+      image(img[14], 0, 0);
       say("No definitely not", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 177:
+      image(img[14], 0, 0);
       say(
         "Boss: Take a breathalyzer test then",
         windowWidth / 2,
@@ -1267,8 +1330,11 @@ function draw() {
       );
       break;
     case 178:
+      image(img[14], 0, 0);
+      say("*You blow into a breathalyzer*")
       break;
     case 179:
+      image(img[14], 0, 0);
       say(
         "Boss: A BAC of 0.05 is way to high for the \nstart of your shift",
         windowWidth / 2,
@@ -1276,6 +1342,7 @@ function draw() {
       );
       break;
     case 180:
+      image(img[14], 0, 0);
       say(
         "Boss: You're fired. Go home and sober up",
         windowWidth / 2,
@@ -1283,6 +1350,7 @@ function draw() {
       );
       break;
     case 181:
+      image(img[14], 0, 0);
       say(
         "Boss: You have messed up way to many drinks \nto be working here. You are not qualified \nto be a bartender",
         windowWidth / 2,
@@ -1290,24 +1358,27 @@ function draw() {
       );
       break;
     case 182:
-      text(
+      image(img[6], 0, 0);
+      say(
         "You continue your job as a bartender. You \ncontinue drinking behind the bar and before \nshifts to keep your spirits up. Unfortunately, you end up forming a dependancy on alcohol. You continue your job and become a functioning alcoholic",
         windowWidth / 2,
-        windowHeight * 0.33 + 50
+        windowHeight * 0.66 + 100
       );
       break;
     case 183:
-      text(
+      image(img[12], 0, 0);
+      say(
         "After you were fired for being drunk behind \nthe bar you have decided to cut alcohol out \nof your life. With recommendations from your friends and family you decide rehab is a good idea for you. You then find a job away from alcohol",
         windowWidth / 2,
-        windowHeight * 0.33 + 50
+        windowHeight * 0.66 + 100
       );
       break;
     case 184:
-      text(
+      image(img[5], 0, 0);
+      say(
         "After you were fired for being a terible bartender \nyou find a different job. You start \nas a customer service rep on Monday.",
         windowWidth / 2,
-        windowHeight * 0.33 + 50
+        windowHeight * 0.66 + 100
       );
       break;
   }
