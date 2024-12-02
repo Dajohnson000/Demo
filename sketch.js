@@ -116,7 +116,7 @@ function draw() {
       break;
     case 6:
       image(img[6], 0, 0);
-      say("Shift 1", windowWidth / 2, windowHeight * 0.33 + 50);
+      say("Shift 1", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 7:
       image(img[3], 0, 0);
