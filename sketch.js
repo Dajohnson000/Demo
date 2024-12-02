@@ -1381,6 +1381,7 @@ function draw() {
         windowHeight * 0.66 + 100
       );
       break;
+
   }
   console.log(state);
 }
