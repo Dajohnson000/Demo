@@ -232,6 +232,7 @@ function draw() {
           state = 21;
         }
       }
+      //fixing git
       break;
     case 20:
       image(img[5], 0, 0);
