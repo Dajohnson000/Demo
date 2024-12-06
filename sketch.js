@@ -225,11 +225,11 @@ function draw() {
         state++;
       }
       if (youWon === false) {
-        if ( fail == 3){
+        if ( fail === 3){
           state = 181;
         }
         else {
-          state === 21;
+          state = 21;
         }
       }
       break;
