@@ -225,13 +225,8 @@ function draw() {
         state++;
       }
       if (youWon === false) {
-        if ( fail === 3){
-          state = 181;
-        }
-        else {
           state === 21;
         }
-      }
       break;
     case 20:
       image(img[5], 0, 0);
