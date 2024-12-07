@@ -30,8 +30,6 @@ function preload(){
   gin = new Ingredient("gin", 425, yPos, false, 'assets/gin.png', 85, 85);
   tonic = new Ingredient("tonic", 500, yPos, false, 'assets/tonic.png', 85, 85);
   serve = new Ingredient("serve", 1250, 450, false, 'assets/serve.png', 100, 100);
-
-  backgroundSound = loadSound("assets/lofi-hip-hop-background-lofi-music-270003.mp3")
 }
 function setup() {
   let canvas = new Canvas("fullscreen");
