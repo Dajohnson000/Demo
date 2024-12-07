@@ -31,7 +31,7 @@ function preload(){
   tonic = new Ingredient("tonic", 500, yPos, false, 'assets/tonic.png', 85, 85);
   serve = new Ingredient("serve", 1250, 450, false, 'assets/serve.png', 100, 100);
 
- 
+  backgroundSound = loadSound("assets/lofi-hip-hop-background-lofi-music-270003.mp3")
 }
 function setup() {
   let canvas = new Canvas("fullscreen");
@@ -52,13 +52,12 @@ img[12] = loadImage('assets/rehab.jpg');
 img[13] = loadImage('assets/Bosshappy.JPG');
 img[14] = loadImage('assets/bossmad.JPG');
 
-backgroundSound = loadSound("assets/background.mp3")
+
 
 }
 
 function draw() {
   background("darkolivegreen");
-  music();
   img[2].resize(windowWidth,windowHeight);
   img[3].resize(windowWidth,windowHeight);
   img[4].resize(windowWidth,windowHeight);
@@ -451,11 +450,11 @@ function draw() {
       break;
     case 49:
       image(img[7], 0, 0);
-      text("End of Shift 2", windowWidth / 2, windowHeight * 0.66 + 100);
+      say("End of Shift 2", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 50:
       image(img[6], 0, 0);
-      text("Shift 3", windowWidth / 2, windowHeight * 0.66 + 100);
+      say("Shift 3", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 51:
       image(img[4], 0, 0);
@@ -1200,7 +1199,7 @@ function draw() {
     case 158:
       image(img[10], 0, 0);
       say(
-        "I will just take one little shot to improve my spirits",
+        "I will just take one little shot to improve my \nspirits",
         windowWidth / 2,
         windowHeight * 0.66 + 100
       );
@@ -1215,7 +1214,7 @@ function draw() {
       break;
     case 161:
       image(img[10], 0, 0);
-      text("*Takes a shot*", windowWidth / 2, windowHeight * 0.66 + 100);
+      say("*Takes a shot*", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 162:
       image(img[10], 0, 0);
@@ -1252,19 +1251,16 @@ function draw() {
       );
       break;
     case 168:
-      answer = " whsikey";
+      console.log(winCondition);
       bar();
-      if (winCondition === true) {
+      answer = " whiskey";
+      if (youWon === true) {
         state++;
       }
-      if (winCondition === false) {
-        if ( fail == 3){
-          state = 181;
-        }
-        else {
+      if (youWon === false) {{
           state = 172;
+        }
       }
-    }
       break;
     case 169:
       image(img[5], 0, 0);
@@ -1287,9 +1283,10 @@ function draw() {
       say("Andy: Alright", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 172:
+      console.log(winCondition);
       image(img[5], 0, 0);
       youWon = undefined;
-      winCondition = undefined;
+      //winCondition = undefined;
       recipe = "";
       say(
         "Andy: This is not what I ordered",
@@ -1361,7 +1358,7 @@ function draw() {
     case 182:
       image(img[6], 0, 0);
       say(
-        "You continue your job as a bartender. You \ncontinue drinking behind the bar and before \nshifts to keep your spirits up. Unfortunately, you end up forming a dependancy on alcohol. You continue your job and become a functioning alcoholic",
+        "You continue your job as a bartender. You \ncontinue drinking behind the bar and before \nshifts to keep your spirits up. Unfortunately, you\n end up forming a dependancy on alcohol. You continue your job and become a functioning alcoholic",
         windowWidth / 2,
         windowHeight * 0.66 + 100
       );
@@ -1375,9 +1372,9 @@ function draw() {
       );
       break;
     case 184:
-      image(img[5], 0, 0);
+      image(img[11], 0, 0);
       say(
-        "After you were fired for being a terible bartender \nyou find a different job. You start \nas a customer service rep on Monday.",
+        "After you were fired for being a terible bartender \nyou find a different job. You start \nas a grocer on Monday.",
         windowWidth / 2,
         windowHeight * 0.66 + 100
       );
@@ -1433,7 +1430,4 @@ function keyPressed() {
       state = 184;
     }
   }
-}
-function music() {
-  backgroundSound.play();
 }
