@@ -30,7 +30,7 @@ function bar() {
   whiskey.display();
   soda.display();
   ice.display();
-  tequilla.display();
+  tequila.display();
   gin.display();
   tonic.display();
   serve.display();
@@ -51,7 +51,7 @@ function mouseClicked() {
   if (whiskey.mouseClicked()) recipe = recipe + " whiskey";
   if (soda.mouseClicked()) recipe = recipe + " soda";
   if (ice.mouseClicked()) recipe = recipe + " ice";
-  if (tequilla.mouseClicked()) recipe = recipe + " tequilla";
+  if (tequila.mouseClicked()) recipe = recipe + " tequila";
   if (gin.mouseClicked()) recipe = recipe + " gin";
   if (tonic.mouseClicked()) recipe = recipe + " tonic";
   text(answer, 150, 125);

@@ -4,7 +4,7 @@ let rum;
 let whiskey;
 let soda;
 let ice;
-let tequilla;
+let tequila;
 let gin;
 let tonic;
 let recipe = "";
@@ -19,21 +19,23 @@ let fail = 0;
 let img = [];
 let imgWidth;
 let imgHeight;
+let backgroundSound;
 function preload(){
   vodka = new Ingredient("vodka", 125, yPos, false, 'assets/vodka.png', 85, 85);
   rum = new Ingredient("rum", 200, yPos, false, 'assets/rum.png', 85, 85);
   whiskey = new Ingredient("whiskey", 275, yPos, false,'assets/whiskey.png', 85, 85);
   soda = new Ingredient("soda", 850, yPos, false, 'assets/soda.png', 100, 100);
   ice = new Ingredient("ice", 975, 535, false, 'assets/ice.png', 250, 85);
-  tequilla = new Ingredient("tequilla", 350, yPos, false, 'assets/tequilla.png', 85, 85);
+  tequila = new Ingredient("tequila", 350, yPos, false, 'assets/tequilla.png', 85, 85);
   gin = new Ingredient("gin", 425, yPos, false, 'assets/gin.png', 85, 85);
   tonic = new Ingredient("tonic", 500, yPos, false, 'assets/tonic.png', 85, 85);
   serve = new Ingredient("serve", 1250, 450, false, 'assets/serve.png', 100, 100);
+
+ 
 }
 function setup() {
   let canvas = new Canvas("fullscreen");
   textFont("Courier", 24);
-  console.log(serve);
 img[0] = loadImage('assets/drinkbackground.png');
 img[1] = loadImage('assets/textbox.png');
 img[2] = loadImage('assets/andylistening.JPG');
@@ -50,12 +52,13 @@ img[12] = loadImage('assets/rehab.jpg');
 img[13] = loadImage('assets/Bosshappy.JPG');
 img[14] = loadImage('assets/bossmad.JPG');
 
+backgroundSound = loadSound("assets/background.mp3")
 
 }
 
 function draw() {
   background("darkolivegreen");
-  console.log(youWon);
+  music();
   img[2].resize(windowWidth,windowHeight);
   img[3].resize(windowWidth,windowHeight);
   img[4].resize(windowWidth,windowHeight);
@@ -109,7 +112,7 @@ function draw() {
     case 5:
       image(img[13], 0, 0);
       say(
-        "That should not be a probelm",
+        "That should not be a problem",
         windowWidth / 2,
         windowHeight * 0.66 + 100
       );
@@ -121,7 +124,7 @@ function draw() {
     case 7:
       image(img[3], 0, 0);
       say(
-        "Andy: Well hellos there. I have \n not met you yet. You must be new",
+        "Andy: Well hello there. I have \n not met you yet. You must be new",
         windowWidth / 2,
         windowHeight * 0.66 + 100
       );
@@ -137,7 +140,7 @@ function draw() {
     case 9:
       image(img[3], 0, 0);
       say(
-        "Andy: Well, everyday I need time \naway from my wife to have some \nme time so I strool down here",
+        "Andy: Well, everyday I need time \naway from my wife to have some \nme time so I stroll down here",
         windowWidth / 2,
         windowHeight * 0.66 + 100
       );
@@ -184,8 +187,6 @@ function draw() {
       winCondition = undefined;
       recipe = "";
       say("Here ya go", windowWidth / 2, windowHeight * 0.66 + 100);
-      console.log("hello");
-      console.log(say);
       break;
     case 15:
       image(img[3], 0, 0);
@@ -232,7 +233,6 @@ function draw() {
           state = 21;
         }
       }
-      //fixing git
       break;
     case 20:
       image(img[5], 0, 0);
@@ -470,7 +470,7 @@ function draw() {
       image(img[3], 0, 0);
 
       say(
-        "Andy: Been better, been worse",
+        "Andy: Been better",
         windowWidth / 2,
         windowHeight * 0.66 + 100
       );
@@ -940,7 +940,7 @@ function draw() {
       image(img[3], 0, 0);
 
       say(
-        "Andy: Can I get a tequilla soda?",
+        "Andy: Can I get a tequila soda?",
         windowWidth / 2,
         windowHeight * 0.66 + 100
       );
@@ -950,7 +950,7 @@ function draw() {
       say("Of course", windowWidth / 2, windowHeight * 0.66 + 100);
       break;
     case 121:
-      answer = " tequilla soda";
+      answer = " tequila soda";
       bar();
       if (winCondition === true) {
         state++;
@@ -1433,4 +1433,7 @@ function keyPressed() {
       state = 184;
     }
   }
+}
+function music() {
+  backgroundSound.play();
 }
